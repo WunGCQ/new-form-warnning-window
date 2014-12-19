@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cmn-Hans">
+    <meta charset="UTF-8">
+    <title>特准客精准营销系统</title>
+    <link rel="stylesheet" href="popwindow.css"/>
+    <link rel="stylesheet" href="warning.css"/>
+    <script src="jquery.min.js"></script>
+    <script src="warning.js"></script>
+    <script src="popwindow.js"></script>
+    <style>
+        body{
+            position: relative;
+            margin:0px;
+            padding:0px;
+            min-height: 100%;
+            font-size: 14px;
+            background-color: #f1f1f1;
+
+        }
+        html{
+            min-height: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick = "test()"> show the form window </button>
+    <code>
+        <pre>
+            function test(){
+                var arg = new Object();
+                 arg.title = "宋子明的博客！";
+                arg.color = "#f60";
+                arg.link = "<a href='#'>没有账户？注册</a>"
+                arg.words = "登录";
+                arg.labels = ['用户名','密码'];
+                arg.inputs = ['&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;请输入您的用户名&quot;&gt;&#39;,&#39;&lt;input type=&quot;password&quot; class=&quot;form-control&quot; placeholder=&quot;请输入您的密码&quot;&gt;'];
+                window.mmm = new formWindow(arg);
+                mmm.showWindow();
+            }
+        </pre>
+    </code>
+    <p>
+        cool!
+    </p>
+    <button onclick = "warn('warn!','this is the warning window!','f',true)"> show the warning </button>
+</body>
+</html>
